@@ -93,7 +93,7 @@ app.route("/articles/:articleTitle")
     .patch(function (req, res) {
         Artitcle.updateOne(
             { title: req.params.articleTitle },
-            { $set: req.body }, //dynamic, changes will be mode to the fields that he user specifies.
+            { $set: req.body }, //dynamic, changes will be made to the fields that the user specifies.
             function (err) {
                 if (!err)
                     res.send("Successfully update article");
